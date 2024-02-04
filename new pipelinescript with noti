@@ -43,7 +43,7 @@ slacknotification(currentBuild.result)
 
 }// Node clsoing
 
-def slacknotification(string buildStatus = 'STARTED'){
+def slacknotification(string buildStatus = "STARTED"){
 buildStatus = buildStatus ?: 'SUCCESSFUL'
 
 //Default values
