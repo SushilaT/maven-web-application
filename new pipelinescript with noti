@@ -43,12 +43,12 @@ slacknotification(currentBuild.result)
 
 }// Node clsoing
 
-def slacknotification(String buildStatus = "STARTED"){
+def slack notification(String buildStatus = "STARTED"){
 buildStatus = buildStatus ?: 'SUCCESSFUL'
 
 //Default values
 def colorName = 'red'
-def colorcode = '#FF0000'
+def colorCode = '#FF0000'
 def subject = "${buildStatus}: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]'"
 def summary = "${subject} (${env.BUILD_URL})"
 
