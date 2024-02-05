@@ -36,11 +36,13 @@ catch(e){
 currentBuild.result = "FAILURE"
 throw e
 } finally {
+// Success or failure, always send notification
 slacknotification(currentBuild.result)
 }
 
 
-}// Node clsoing
+}
+// Node closing
 
 def slacknotification(String buildStatus = "STARTED"){
 
